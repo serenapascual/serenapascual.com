@@ -1,9 +1,9 @@
 # Site/SEO settings
-email: 
-permalink: /:year/:month/:day/:title/
+email: serena.a.pascual@gmail.com
+permalink: /:title/
 google_analytics: 
 
-title: Trophy
+title: Some Site
 description: 
 url: ""
 baseurl: ""
@@ -11,11 +11,11 @@ twitter_username:
 default_img: 
 
 # Profile settings
-name: 
+name: Serena Pascual
 profile_img: 
 profile: 
 social:
-  github: 
+  github: "http://github.com/serenapascual"
 
 # Build settings
 markdown: kramdown
