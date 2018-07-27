@@ -1,4 +1,40 @@
 /**
+ * Pages
+ * For About and Contact pages
+ */
+.pages {
+
+  &__img {
+    will-change: opacity;
+    animation: fade-in 1s both;
+  }
+
+  &__container {
+    display: block;
+    padding: 4em 2em;
+
+    @media (min-width: $mq-md) {
+      padding: 2em 6em;
+    }
+
+    @media (min-width: $mq-xxl) {
+      padding-left: 8em;
+      padding-right: 8em;
+    }
+  }
+
+  &__header {
+    color: $color-alpha;
+    margin-bottom: 0.5em;
+  }
+
+  &__description {
+    color: $color-black;
+  }
+
+}
+
+/**
  * Tabs
  * On the Blog page for posts and categories
  */
@@ -12,13 +48,13 @@
   list-style-type: none;
 
   @media (min-width: $mq-md) {
-    padding-left: 8em;
-    padding-right: 8em;
+    padding-left: 0em;
+    padding-right: 0em;
   }
 
   @media (min-width: $mq-xxl) {
-    padding-left: 10em;
-    padding-right: 10em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   ul {
@@ -326,10 +362,13 @@
     flex-direction: row;
   }
 
-  &__archive {
-    @include border-slide();
-
-    @extend %letter-spacing;
+  &__copyright {
+    font-family: $font-body;
+    text-transform: none;
+    font-weight: bold;
+    &:hover {
+      color: $color-black;
+    }
   }
 
   &__social {

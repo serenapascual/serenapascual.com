@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contact - Serena Pascual
+title: Contact - srna
 description:
 permalink: /contact/
 ---
@@ -8,7 +8,7 @@ permalink: /contact/
   <div>
 
     {% for post in paginator.posts %}
-      <figure class="absolute-bg preview__img" style="background-image: url('{{ post.image }}');"></figure>
+    <figure class="absolute-bg preview__img" style="background-image: url('{{ post.image }}');"></figure>
     {% endfor %}
 
     <div class="previews__container">
@@ -18,16 +18,19 @@ permalink: /contact/
   </div>
 
   <div>
-    <header>
-      <ul class="tabs">
-        <li class="tabs__item">Posts</li>
-        <li class="tabs__item">Categories</li>
-      </ul>
-    </header>
+
+    <article class="pages" itemprop="blogPost" itemscope>
+      <span class="pages__container">
+        <h2 class="pages__header" itemprop="name">Let's chat</h2>
+        <p class="pages__description" itemprop="description">
+          Under construction
+        </p>
+      </span>
+    </article>
 
     <div class="tab">
 
-      {% include non-contact-links.html %}
+      {% include links.html %}
 
     </div>
 
