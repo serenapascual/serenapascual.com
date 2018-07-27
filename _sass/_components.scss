@@ -129,9 +129,13 @@
 
     color: $color-white;
 
+    a {
+      color: $color-white;
+    }
+
     span {
       @extend %letter-spacing;
-
+      padding-top:0.5em;
       font-family: $font-body;
     }
   }

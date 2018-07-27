@@ -1,21 +1,22 @@
 # Site/SEO settings
-email: serena.a.pascual@gmail.com
+email: hi@serenapascual.com
 permalink: /:title/
-google_analytics: 
+google_analytics:
 
-title: Some Site
-description: 
-url: ""
+title: Serena&#8239;Pascual
+description: The musings, learnings, and creative aspirations of a software engineer who goes by the name of Serena Pascual.
+url: "http://www.serenapascual.com"
 baseurl: ""
-twitter_username: 
-default_img: 
+twitter_username:
+default_img:
 
 # Profile settings
 name: Serena Pascual
-profile_img: 
-profile: 
+profile_img:
+profile:
 social:
-  github: "http://github.com/serenapascual"
+  github: "https://www.github.com/serenapascual"
+  linkedin: "https://www.linkedin.com/in/serenapascual"
 
 # Build settings
 markdown: kramdown
@@ -37,7 +38,7 @@ exclude:
 
 # Pagination
 paginate: 5
-paginate_path: "/blog/page-:num"
+paginate_path: "/blog/page/:num"
 
 # Sass
 sass:
