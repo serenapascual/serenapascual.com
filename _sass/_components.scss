@@ -3,10 +3,11 @@
  * For About and Contact pages
  */
 .pages {
-
   &__img {
-    will-change: opacity;
-    animation: fade-in 1s both;
+      margin: 2em 0;
+      display: block;
+      -webkit-margin-before: 1em;
+      -webkit-margin-after: 1em;
   }
 
   &__container {
@@ -29,6 +30,9 @@
   }
 
   &__description {
+    display: block;
+    font-family: $font-post;
+
     color: $color-black;
   }
 
@@ -95,12 +99,6 @@
   width: 100%;
   padding: 2em;
 
-  a {
-    &:hover {
-      color: $color-black;
-    }
-  }
-
   img {
     height: 72px;
     width: 72px;
@@ -151,6 +149,38 @@
       box-shadow: inset 200px 0 0 0 #9f8f68;
       color: #fff;
     }
+  }
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 2em;
+
+  a {
+    &:hover {
+      color: $color-black;
+    }
+  }
+
+  h1 {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    margin: 0;
+    font-family: "Space Mono",monospace;
+    color: #9f8f68;
+  }
+
+  span {
+    display: block;
+    letter-spacing: .05em;
+    text-transform: uppercase;
   }
 }
 
