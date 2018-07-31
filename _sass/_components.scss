@@ -95,6 +95,12 @@
   width: 100%;
   padding: 2em;
 
+  a {
+    &:hover {
+      color: $color-black;
+    }
+  }
+
   img {
     height: 72px;
     width: 72px;
@@ -366,6 +372,7 @@
     font-family: $font-body;
     text-transform: none;
     font-weight: bold;
+
     &:hover {
       color: $color-black;
     }
