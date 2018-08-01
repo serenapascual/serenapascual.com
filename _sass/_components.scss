@@ -3,6 +3,10 @@
  * For About and Contact pages
  */
 .pages {
+  a {
+    border-bottom: 1px solid $color-alpha;
+  }
+
   &__img {
       margin: 2em 0;
       display: block;
