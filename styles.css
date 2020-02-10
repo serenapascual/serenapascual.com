@@ -1,0 +1,36 @@
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.img-link, .img-link img {
+    text-decoration: none;
+}
+
+a:hover {
+
+}
+
+header {
+  padding: 30px 30px 10px 30px;
+}
+
+section {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+section > div {
+  padding: 10px 30px 10px 30px;
+}
+
+footer {
+  font-size: 12px;
+  padding:30px;
+  text-align: right;
+}
