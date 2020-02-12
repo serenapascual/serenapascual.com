@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .img-link, .img-link img {
@@ -16,21 +16,30 @@ a:hover {
 }
 
 header {
-  padding: 30px 30px 10px 30px;
+  display: flex;
+  font-size: 18px;
+  padding: 2em;
+  justify-content: flex-end;
 }
 
-section {
-  display: -webkit-flex;
+.container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
-section > div {
-  padding: 10px 30px 10px 30px;
+.content {
+  flex: 1;
+  padding: 2em;
+}
+
+.content > div {
+  margin-top: 2em;
 }
 
 footer {
+  display: flex;
   font-size: 12px;
-  padding:30px;
-  text-align: right;
+  padding: 2em;
+  justify-content: flex-end;
 }
