@@ -130,7 +130,7 @@ export default function Layout({ children }) {
           <ListLink to="/contact/">Contact</ListLink>
         </ul>
       </header>
-      <div style={{ display: `grid`, gridTemplateColumns: `450px 250px` }}>
+      <div style={{ display: `grid`, gridTemplateColumns: `425px 275px` }}>
         <ul><VisuallyInteresting /></ul>
         <ul>{children}</ul>
       </div>
