@@ -10,3 +10,4 @@ build/
 bundle.js
 node_modules
 .cache/
+public/

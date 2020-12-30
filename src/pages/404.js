@@ -1,13 +1,18 @@
 import React from "react"
-import Layout from "../components/layout"
+import { Helmet } from "react-helmet"
 
 export default function About() {
   return (
-    <Layout>
+    <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>serena pascual | 404</title>
+        <link rel="canonical" href="https://serenapascual.com/" />
+      </Helmet>
       <h1>404</h1>
       <p>
-        uh oh i don't think that's good
+        sorry, couldn't find that!
       </p>
-    </Layout>
+    </div>
   )
 }
