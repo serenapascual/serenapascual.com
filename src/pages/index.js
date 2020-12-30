@@ -1,13 +1,12 @@
 import React from "react"
-import Layout from "../components/layout"
 
 export default function Home() {
   return (
-    <Layout>
+    <div>
       <h1>hi, i'm serena</h1>
       <p>
-        this was a pain in the ass
+        artist at heart and software engineer by trade, i write code to solve problems and spread smiles.
       </p>
-    </Layout>
+    </div>
   )
 }

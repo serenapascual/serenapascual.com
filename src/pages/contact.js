@@ -1,13 +1,18 @@
 import React from "react"
-import Layout from "../components/layout"
 
 export default function Contact() {
   return (
-    <Layout>
-      <h1>I'd love to talk! Email me at the address below</h1>
+    <div>
+      <h2>let's chat!</h2>
       <p>
-        <a href="mailto:me@example.com">me@example.com</a>
+        feel free to drop me a line at <a href="mailto:hi@serenapascual.com">hi@serenapascual.com</a>.
       </p>
-    </Layout>
+      <p>
+        you can also find driblets of my presence in the spaces below:
+      </p>
+      <p>
+        <a href="https://github.com/serenapascual">Github ↗</a> <a href="https://linkedin.com/in/serenapascual">LinkedIn ↗</a> <a href="https://reading.supply/@serena">Reading Supply ↗</a>
+      </p>
+    </div>
   )
 }

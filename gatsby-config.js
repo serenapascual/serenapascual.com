@@ -1,9 +1,9 @@
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-plugin-layout`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        component: require.resolve(`./src/components/layout`),
       },
     },
   ],

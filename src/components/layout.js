@@ -1,10 +1,23 @@
 import React from "react"
 import { Link } from "gatsby"
 import Scene from "./scene"
+import "fontsource-karla"
+import "fontsource-karla/600.css"
+
+const listLinkStyles = {
+  color: `#838383`,
+  textDecoration: `none`
+}
+
+const listLinkActiveStyles = {
+  color: `#358182`,
+  textDecoration: `none`,
+  fontWeight: `bold`,
+}
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
+    <Link style={listLinkStyles} activeStyle={listLinkActiveStyles} to={props.to}>{props.children}</Link>
   </li>
 )
 
@@ -28,7 +41,7 @@ const Frame = props => (
       position: `relative`,
       height: `450px`,
       width: `350px`,
-      border: `1px solid black`
+      border: `1px solid #222`
     }}>
       {props.children}
   </div>
@@ -41,7 +54,7 @@ const Container = props => (
       width: `300px`,
       left: `25px`,
       top: `25px`,
-      border: `1px solid black`
+      border: `1px solid #222`
     }}>
       {props.children}
       <Scene></Scene>
@@ -52,7 +65,7 @@ const GrilleVertical = props => (
   <div style= {{ 
       position: `absolute`,
       zIndex: `10`,
-      backgroundColor: `white`,
+      backgroundColor: `#fffdfb`,
       height: `101%`,
       width: `6px`,
       top: `-1px`,
@@ -66,7 +79,7 @@ const GrilleVerticalOutline = props => (
   <div style= {{ 
       position: `absolute`,
       zIndex: `8`,
-      backgroundColor: `black`,
+      backgroundColor: `#222`,
       height: `100%`,
       width: `8px`,
       left: `149px`
@@ -79,7 +92,7 @@ const GrilleHorizontal = props => (
   <div style= {{ 
       position: `absolute`,
       zIndex: `11`,
-      backgroundColor: `white`,
+      backgroundColor: `#fffdfb`,
       height: `6px`,
       width: `101%`,
       top: `200px`,
@@ -93,7 +106,7 @@ const GrilleHorizontalOutline = props => (
   <div style= {{ 
       position: `absolute`,
       zIndex: `9`,
-      backgroundColor: `black`,
+      backgroundColor: `#222`,
       height: `8px`,
       width: `100%`,
       top: `199px`
@@ -110,7 +123,7 @@ const Sill = props => (
       width: `400px`,
       top: `100%`,
       left: `-25px`,
-      border: `1px solid black`
+      border: `1px solid #222`
     }}>
       {props.children}
   </div>
@@ -120,14 +133,14 @@ const Sill = props => (
 export default function Layout({ children }) {
   return (
     <div style={{ margin: `3rem auto`, maxWidth: 700 }}>
-      <header style={{ marginBottom: `1.5rem` }}>
-        <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-          <h3 style={{ display: `inline` }}>Serena Pascual</h3>
+      <header style={{ marginBottom: `2rem` }}>
+        <Link to="/" style={{ textDecoration: `none`, backgroundImage: `none` }}>
+          <h3 style={{ display: `inline`, color: `#222` }}>serena pascual</h3>
         </Link>
         <ul style={{ listStyle: `none`, float: `right` }}>
-          <ListLink to="/about">About</ListLink>
-          <ListLink to="/projects/">Projects</ListLink>
-          <ListLink to="/contact/">Contact</ListLink>
+          <ListLink to="/about">about</ListLink>
+          <ListLink to="/projects">projects</ListLink>
+          <ListLink to="/contact">contact</ListLink>
         </ul>
       </header>
       <div style={{ display: `grid`, gridTemplateColumns: `425px 275px` }}>
