@@ -103,8 +103,8 @@ class Scene extends React.Component {
       fragmentShader,
       uniforms
     })
-    this.cube = new THREE.Mesh(geometry, material)
-    this.scene.add(this.cube)
+    this.plane = new THREE.Mesh(geometry, material)
+    this.scene.add(this.plane)
     this.start()
   }
 

@@ -40,9 +40,9 @@ export default function Layout({ children }) {
           <ListLink to="/contact">contact</ListLink>
         </ul>
       </header>
-      <div style={{ display: `grid`, gridTemplateColumns: `repeat(2, 1fr` }}>
+      <div className="subnav">
         <ul><VisuallyInteresting /></ul>
-        <ul>{children}</ul>
+        <ul style={{ paddingLeft: `1em` }}>{children}</ul>
       </div>
     </div>
   )

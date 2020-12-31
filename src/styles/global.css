@@ -5,6 +5,12 @@ body {
   width: 100vw;
 }
 
+@media(max-width: 500px) {
+  body {
+    font-size: 0.75em;
+  }
+}
+
 a {
   color: #838383;
   text-decoration: underline;
@@ -15,14 +21,39 @@ p a:hover {
   color: #fffdfb;
 }
 
-.layout {
-  margin: 3rem auto;
-  max-width: 70vw;
+ul {
+  padding-inline-start: 0em;
 }
 
-@media(max-width: 600px) {
+.layout {
+  margin: 3rem auto;
+  max-width: 65vw;
+}
+
+@media(max-width: 800px) {
   .layout {
     margin: 1 2rem;
-    max-width: 90vw;
+    max-width: 85vw;
   }
+}
+
+.subnav {
+  max-width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tooltip {
+  position: relative;
+  border-bottom: 1px dotted #bbbbbb;
+}
+
+.tooltip:before {
+  font-size: 0.75rem;
+  content: attr(data-text);
+  position: absolute;
+  opacity: 0;
+  color:#fffdfb;
+  background-color: #358182;
+  padding: 2px 5px;
 }

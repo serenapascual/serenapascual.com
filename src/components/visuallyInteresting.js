@@ -1,9 +1,11 @@
 import React from "react"
 import Scene from "./threeScene"
 
-const Frame = props => (
+const FrameOutline = props => (
   <div style= {{ 
-      position: `relative`,
+      display: `inline-block`,
+      position: `absolute`,
+      zIndex: `8`,
       height: `360px`,
       width: `280px`,
       border: `1px solid #222`
@@ -12,42 +14,126 @@ const Frame = props => (
   </div>
 )
 
-const Container = props => (
+const FrameTop = props => (
   <div style= {{ 
       position: `absolute`,
-      height: `320px`,
-      width: `240px`,
-      left: `20px`,
+      zIndex: `6`,
+      height: `20px`,
+      width: `280px`,
+      left: `0px`,
+      top: `0px`,
+      backgroundColor: `#fffdfb`,
+    }}>
+      {props.children}
+  </div>
+)
+
+const FrameRight = props => (
+  <div style= {{ 
+      position: `absolute`,
+      zIndex: `1`,
+      height: `360px`,
+      width: `20px`,
+      left: `260px`,
+      top: `0px`,
+      backgroundColor: `#fffdfb`,
+    }}>
+      {props.children}
+  </div>
+)
+
+const FrameBottom = props => (
+  <div style= {{ 
+      position: `absolute`,
+      zIndex: `6`,
+      height: `20px`,
+      width: `280px`,
+      left: `0px`,
+      top: `340px`,
+      backgroundColor: `#fffdfb`,
+    }}>
+      {props.children}
+  </div>
+)
+
+const FrameLeft = props => (
+  <div style= {{ 
+      position: `absolute`,
+      zIndex: `6`,
+      height: `360px`,
+      width: `20px`,
+      left: `0px`,
+      top: `0px`,
+    }}>
+      {props.children}
+  </div>
+)
+
+const PaneUpperLeft = props => (
+  <div style= {{ 
+      position: `absolute`,
+      zIndex: `10`,
+      height: `156px`,
+      width: `116px`,
       top: `20px`,
+      left: `20px`,
       border: `1px solid #222`
     }}>
       {props.children}
-      <Scene></Scene>
+  </div>
+)
+
+const PaneUpperRight = props => (
+  <div style= {{ 
+      position: `absolute`,
+      zIndex: `11`,
+      height: `156px`,
+      width: `116px`,
+      top: `20px`,
+      left: `143px`,
+      border: `1px solid #222`
+    }}>
+      {props.children}
+  </div>
+)
+
+const PaneLowerLeft = props => (
+  <div style= {{ 
+      position: `absolute`,
+      zIndex: `12`,
+      height: `156px`,
+      width: `116px`,
+      top: `183px`,
+      left: `20px`,
+      border: `1px solid #222`
+    }}>
+      {props.children}
+  </div>
+)
+
+const PaneLowerRight = props => (
+  <div style= {{ 
+      position: `absolute`,
+      zIndex: `12`,
+      height: `156px`,
+      width: `116px`,
+      top: `183px`,
+      left: `143px`,
+      border: `1px solid #222`
+    }}>
+      {props.children}
   </div>
 )
 
 const GrilleVertical = props => (
   <div style= {{ 
       position: `absolute`,
-      zIndex: `10`,
+      zIndex: `4`,
       backgroundColor: `#fffdfb`,
-      height: `101%`,
+      height: `322px`,
       width: `6px`,
-      top: `-1px`,
-      left: `120px`,
-    }}>
-      {props.children}
-  </div>
-)
-
-const GrilleVerticalOutline = props => (
-  <div style= {{ 
-      position: `absolute`,
-      zIndex: `8`,
-      backgroundColor: `#222`,
-      height: `100%`,
-      width: `8px`,
-      left: `119px`
+      top: `20px`,
+      left: `138px`,
     }}>
       {props.children}
   </div>
@@ -56,25 +142,12 @@ const GrilleVerticalOutline = props => (
 const GrilleHorizontal = props => (
   <div style= {{ 
       position: `absolute`,
-      zIndex: `11`,
+      zIndex: `3`,
       backgroundColor: `#fffdfb`,
       height: `6px`,
-      width: `101%`,
-      top: `180px`,
-      left: `-1px`,
-    }}>
-      {props.children}
-  </div>
-)
-
-const GrilleHorizontalOutline = props => (
-  <div style= {{ 
-      position: `absolute`,
-      zIndex: `9`,
-      backgroundColor: `#222`,
-      height: `8px`,
-      width: `100%`,
-      top: `179px`
+      width: `242px`,
+      top: `178px`,
+      left: `20px`,
     }}>
       {props.children}
   </div>
@@ -84,13 +157,29 @@ const Sill = props => (
   <div style= {{ 
       position: `absolute`,
       zIndex: `13`,
+      backgroundColor: `#fffdfb`,
       height: `20px`,
       width: `320px`,
-      top: `100%`,
+      top: `360px`,
       left: `-20px`,
       border: `1px solid #222`
     }}>
       {props.children}
+  </div>
+)
+
+const Sky = props => (
+  <div style= {{ 
+      display: `inline-block`,
+      position: `absolute`,
+      zIndex: `1`,      
+      height: `400px`,
+      width: `300px`,
+      top: '20px',
+      left: '20px'
+    }}>
+      {props.children}
+      <Scene />
   </div>
 )
 
@@ -101,10 +190,10 @@ function calculateResizeScalar() {
   const currentWidth = window.innerWidth
   const currentHeight = window.innerHeight
   
-  if (currentWidth < bestWidth) {
+  if (currentWidth !== bestWidth) {
     return (currentWidth / bestWidth)
   }
-  else if (currentHeight < bestHeight) {
+  else if (currentHeight !== bestHeight) {
     return (currentHeight / bestHeight)
   }
   return 1.0
@@ -136,6 +225,7 @@ class VisuallyInteresting extends React.Component {
   )
 
   componentDidMount() {
+    this.resize()
     window.addEventListener('resize', this.resize)
   }
 
@@ -145,17 +235,24 @@ class VisuallyInteresting extends React.Component {
 
   render () {
     return (
-      <div style={{ transform: `scale(${this.state.resizeScalar})` }}>
-        <Frame>
-          <Container>
-            <GrilleVertical></GrilleVertical>
-            <GrilleVerticalOutline></GrilleVerticalOutline>
-            <GrilleHorizontal></GrilleHorizontal>
-            <GrilleHorizontalOutline></GrilleHorizontalOutline>
-          </Container>
-          <Sill>
-          </Sill>
-        </Frame>
+      <div style={{ 
+         transform: `scale(${this.state.resizeScalar})`,
+         WebkitTransformOrigin: `top left`
+         }}>
+
+        <FrameOutline />
+        <FrameTop />
+        <FrameRight />
+        <FrameBottom />
+        <FrameLeft />
+        <PaneUpperLeft />
+        <PaneUpperRight />
+        <PaneLowerLeft />
+        <PaneLowerRight />
+        <GrilleVertical />
+        <GrilleHorizontal />
+        <Sky />
+        <Sill />
       </div>
     )
   }

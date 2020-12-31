@@ -17,7 +17,7 @@ export default function Contact() {
         you can also find driblets of my presence in the spaces below:
       </p>
       <p>
-        <a href="https://github.com/serenapascual">Github ↗</a> <a href="https://linkedin.com/in/serenapascual">LinkedIn ↗</a> <a href="https://reading.supply/@serena">Reading Supply ↗</a>
+        <a href="https://github.com/serenapascual">Github&nbsp;↗</a> <a href="https://linkedin.com/in/serenapascual">LinkedIn&nbsp;↗</a> <a href="https://reading.supply/@serena">Reading&nbsp;Supply&nbsp;↗</a>
       </p>
     </div>
   )
