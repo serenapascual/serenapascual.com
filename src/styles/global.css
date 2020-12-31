@@ -2,6 +2,7 @@ body {
   background: #fffdfb;
   color: #222;
   font-family: "Karla";
+  width: 100vw;
 }
 
 a {
@@ -12,4 +13,16 @@ a {
 p a:hover {
   background-color: #358182;
   color: #fffdfb;
+}
+
+.layout {
+  margin: 3rem auto;
+  max-width: 70vw;
+}
+
+@media(max-width: 600px) {
+  .layout {
+    margin: 1 2rem;
+    max-width: 90vw;
+  }
 }

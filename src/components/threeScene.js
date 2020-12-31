@@ -78,9 +78,9 @@ const uniforms = {
   iTime: { value: 0 },
   iResolution:  { value: new THREE.Vector3() },
 }
-class Scene extends React.Component { 
-  
-  componentDidMount(){
+
+class Scene extends React.Component {   
+  componentDidMount() {
     const width = this.mount.clientWidth
     const height = this.mount.clientHeight
 
@@ -108,7 +108,7 @@ class Scene extends React.Component {
     this.start()
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.stop()
     this.mount.removeChild(this.renderer.domElement)
   }
@@ -137,10 +137,18 @@ class Scene extends React.Component {
     this.renderer.render(this.scene, this.camera)
   }
 
-  render(){
+  // onWindowResize() {
+  //   if (this.mount) {
+  //     this.camera.aspect = this.mount.offsetWidth / this.mount.offsetHeight
+  //     this.camera.updateProjectionMatrix()
+  //     this.renderer.setSize(this.mount.offsetWidth, this.mount.offsetHeight)
+  //   }
+  // }
+
+  render() {
     return(
       <div
-        style={{ height: '400px', width: '300px' }}
+        style={{ height: '320px', width: '240px' }}
         ref={(mount) => { this.mount = mount }}
       />
     )
