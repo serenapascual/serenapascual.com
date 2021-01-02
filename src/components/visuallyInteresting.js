@@ -31,7 +31,7 @@ const FrameTop = props => (
 const FrameRight = props => (
   <div style= {{ 
       position: `absolute`,
-      zIndex: `1`,
+      zIndex: `6`,
       height: `360px`,
       width: `20px`,
       left: `260px`,

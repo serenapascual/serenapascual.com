@@ -42,7 +42,7 @@ export default function Layout({ children }) {
       </header>
       <div className="subnav">
         <ul><VisuallyInteresting /></ul>
-        <ul style={{ paddingLeft: `1em` }}>{children}</ul>
+        <ul>{children}</ul>
       </div>
     </div>
   )

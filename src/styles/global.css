@@ -16,6 +16,10 @@ a {
   text-decoration: underline;
 }
 
+p {
+  line-height: 1.4em;
+}
+
 p a:hover {
   background-color: #358182;
   color: #fffdfb;
@@ -46,14 +50,4 @@ ul {
 .tooltip {
   position: relative;
   border-bottom: 1px dotted #bbbbbb;
-}
-
-.tooltip:before {
-  font-size: 0.75rem;
-  content: attr(data-text);
-  position: absolute;
-  opacity: 0;
-  color:#fffdfb;
-  background-color: #358182;
-  padding: 2px 5px;
 }
