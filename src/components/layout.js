@@ -41,8 +41,8 @@ export default function Layout({ children }) {
         </ul>
       </header>
       <div className="subnav">
-        <ul><VisuallyInteresting /></ul>
-        <ul>{children}</ul>
+        <span><VisuallyInteresting /></span>
+        <span style={{ maxHeight: `65vh`, overflowY: `auto` }}>{children}</span>
       </div>
     </div>
   )

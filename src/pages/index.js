@@ -1,6 +1,5 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import ReactTooltip from 'react-tooltip';
 
 export default function Home() {
   return (
@@ -11,11 +10,15 @@ export default function Home() {
         <link rel="canonical" href="https://serenapascual.com/" />
       </Helmet>
       <h1>hi, i'm serena</h1>
-      <p>
-        artist at heart and software engineer by trade, i write code to solve problems and spread <span class="tooltip" data-tip=":-)">smiles</span>.
-        <ReactTooltip place="bottom" type="info" effect="float" backgroundColor="#358182" data-offset="{'top': -10}" />
+      <div>
+        artist at heart and software engineer by trade, i write code to solve problems 
+        and spread smiles.
+      </div>
+      <p className="lineWithFunLink">view my &nbsp;
+        <span>
+          <a href="/Serena_Pascual__Resume_Web__2021_Jan.pdf">resume</a>
+        </span>
       </p>
-      <p><a href="/Serena_Pascual__Resume__2021_Jan.pdf">resume&nbsp;↗</a></p>
     </div>
   )
 }

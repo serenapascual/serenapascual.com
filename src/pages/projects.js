@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import Project from "../components/project"
 
 export default function Projects() {
   return (
@@ -9,31 +10,41 @@ export default function Projects() {
         <title>serena pascual | projects</title>
         <link rel="canonical" href="https://serenapascual.com/" />
       </Helmet>
+
       <h2>recent tinkerings</h2>
-      <h3><a href="https://github.com/serenapascual/southsista">southsista</a></h3>
-      <p>a low-poly flocking simulation inspired by a week of hikes in Central OR.</p>
-      <p>
-        [three.js]
-      </p>
-      <h3><a href="https://github.com/serenapascual/ice-cream-social">ice-cream-social</a></h3>
-      <p>
-        a static website for a friend's budding nonprofit org.
-      </p>
-      <p>
-        [After Effects] [Illustrator] [SVG]
-      </p>
-      <h3><a href="https://github.com/serenapascual/mechmarket">mechmarket - in progress</a></h3>
-      <p>an iOS app to improve the UX of trade within the mechanical keyboard community. </p>
-      <p>
-        [Swift] [UIKit]
-      </p>
-      <h3><a href="https://github.com/serenapascual/serenapascual.com">personal website</a></h3>
-      <p>
-        asserting my existence. lovely sunset GLSL shader owed to <a href="https://www.shadertoy.com/user/miloszmaki">miloszmaki</a>.
-      </p>
-      <p>
-        [React] [three.js]
-      </p>
+      <ul>
+        <Project
+          title="southsista"
+          link="https://github.com/serenapascual/southsista"
+          description="a low-poly flocking simulation inspired by a week of hikes in Central OR."
+          technologies="[three.js]"
+          />
+
+        <Project
+          title="ice-cream-social"
+          link="https://github.com/serenapascual/ice-cream-social"
+          description="a static website for a friend's budding nonprofit organization."
+          technologies="[After Effects] [Illustrator] [SVG]"
+        />
+
+        <Project
+          title="mechmarket - in progress"
+          link="https://github.com/serenapascual/mechmarket"
+          description="an iOS app to enhance the way users trade in the mechanical keyboard community."
+          technologies="[Swift] [UIKit] [Reddit API]"
+          />        
+
+        <Project
+          title="personal website"
+          link="https://github.com/serenapascual/serenapascual.com"
+          description={[
+            <span key="0">asserting my existence. lovely sunset GLSL shader owed to </span>,
+            <a key="1" href="https://www.shadertoy.com/user/miloszmaki\">miloszmaki</a>,
+            <span key="2">.</span>
+          ]}
+          technologies="[React] [three.js]"
+          />
+        </ul>
     </div>
   )
 }

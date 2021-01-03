@@ -1,6 +1,14 @@
+:root {
+  --clr-white: #fffdfb;
+  --clr-grey: #838383;
+  --clr-lightGrey: #bbbbbb;
+  --clr-black: #222;
+  --clr-teal: #358182;
+}
+
 body {
-  background: #fffdfb;
-  color: #222;
+  background: var(--clr-white);
+  color: var(--clr-black);
   font-family: "Karla";
   width: 100vw;
 }
@@ -12,7 +20,7 @@ body {
 }
 
 a {
-  color: #838383;
+  color: var(--clr-grey);
   text-decoration: underline;
 }
 
@@ -20,17 +28,35 @@ p {
   line-height: 1.4em;
 }
 
-p a:hover {
-  background-color: #358182;
-  color: #fffdfb;
-}
-
 ul {
   padding-inline-start: 0em;
 }
 
+html, body, .App, .layout {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.lineWithFunLink > ::after {
+  display: inline-block;
+  content: "\2197";
+  color: var(--clr-black);
+  margin-left: 3px;
+  font-size: 9pt;
+  opacity: 0;
+  transform-origin: bottom left;
+  -webkit-transform-origin: bottom left;
+}
+
+.lineWithFunLink > :hover::after {
+  transform: translate(2px);
+  transition: opacity ease-out 0.3s, transform ease-out 0.3s;
+  opacity: 1;
+}
+
 .layout {
-  margin: 3rem auto;
+  margin: auto;
+  padding: 3em;
   max-width: 65vw;
 }
 
@@ -49,5 +75,29 @@ ul {
 
 .tooltip {
   position: relative;
-  border-bottom: 1px dotted #bbbbbb;
+  border-bottom: 1px dotted var(--clr-lightGrey);
+}
+
+.project p {
+  margin: 10px 0px;
+}
+
+.project h3 {
+  margin: 15px 0px;
+}
+
+.project h3 a {
+  color: var(--clr-black);
+  /* text-decoration: none; */
+  text-decoration-color: var(--clr-teal);
+}
+
+.project h3 a:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-teal);
+  text-decoration: none;
+}
+
+.project + .project {
+  margin-top: 2rem;
 }

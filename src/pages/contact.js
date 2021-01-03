@@ -16,8 +16,16 @@ export default function Contact() {
       <p>
         you can also find driblets of my presence in the spaces below:
       </p>
-      <p>
-        <a href="https://github.com/serenapascual">Github&nbsp;↗</a> <a href="https://linkedin.com/in/serenapascual">LinkedIn&nbsp;↗</a> <a href="https://reading.supply/@serena">Reading&nbsp;Supply&nbsp;↗</a>
+      <p style={{ margin: `-5px 0px 0px 0px` }}>
+        <span className="lineWithFunLink">
+          <a href="https://github.com/serenapascual">Github</a><br />
+        </span>
+        <span className="lineWithFunLink">
+          <a href="https://linkedin.com/in/serenapascual">LinkedIn</a><br />
+        </span>
+        <span className="lineWithFunLink">
+          <a href="https://reading.supply/@serena">Reading&nbsp;Supply</a>
+        </span>
       </p>
     </div>
   )
