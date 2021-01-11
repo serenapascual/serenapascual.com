@@ -23,7 +23,7 @@ export default function Projects() {
         <Project
           title="ice-cream-social"
           link="https://github.com/serenapascual/ice-cream-social"
-          description="a static website for a friend's budding nonprofit organization."
+          description="a static website for a client's budding nonprofit organization."
           technologies="[After Effects] [Illustrator] [SVG]"
         />
 

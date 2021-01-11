@@ -73,11 +73,6 @@ html, body, .App, .layout {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.tooltip {
-  position: relative;
-  border-bottom: 1px dotted var(--clr-lightGrey);
-}
-
 .project p {
   margin: 10px 0px;
 }
@@ -88,7 +83,6 @@ html, body, .App, .layout {
 
 .project h3 a {
   color: var(--clr-black);
-  /* text-decoration: none; */
   text-decoration-color: var(--clr-teal);
 }
 
