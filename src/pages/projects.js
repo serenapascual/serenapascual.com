@@ -11,8 +11,15 @@ export default function Projects() {
         <link rel="canonical" href="https://serenapascual.com/" />
       </Helmet>
 
-      <h2>recent tinkerings</h2>
+      <h2>select tinkerings</h2>
       <ul>
+        <Project
+          title="Computational Photography deck"
+          link="https://docs.google.com/presentation/d/16ia8MDIS8jU4ltnwu_OU9pw9nt6GcriYFh3js3aaWhY/"
+          description="course portfolio for CS 6475 at GA Tech."
+          technologies="[Python] [OpenCV] [NumPy] [SciPy]"
+          />
+
         <Project
           title="southsista"
           link="https://github.com/serenapascual/southsista"
@@ -26,13 +33,6 @@ export default function Projects() {
           description="a static website for a client's budding nonprofit organization."
           technologies="[After Effects] [Illustrator] [SVG]"
         />
-
-        <Project
-          title="mechmarket - in progress"
-          link="https://github.com/serenapascual/mechmarket"
-          description="an iOS app to enhance the way users trade in the mechanical keyboard community."
-          technologies="[Swift] [UIKit] [Reddit API]"
-          />        
 
         <Project
           title="personal website"
