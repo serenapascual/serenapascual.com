@@ -23,9 +23,6 @@ export default function Contact() {
         <span className="lineWithFunLink">
           <a href="https://linkedin.com/in/serenapascual">LinkedIn</a><br />
         </span>
-        <span className="lineWithFunLink">
-          <a href="https://reading.supply/@serena">Reading&nbsp;Supply</a>
-        </span>
       </p>
     </div>
   )
