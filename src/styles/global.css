@@ -99,3 +99,9 @@ html, body, .App, .layout {
 .project + .project {
   margin-top: 2rem;
 }
+
+.cgai img {
+  width: 100%;
+  display: block;
+  padding: 0.75em 0;
+}

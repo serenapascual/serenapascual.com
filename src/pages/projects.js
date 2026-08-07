@@ -10,7 +10,7 @@ export default function Projects() {
     <ul>
       <li>
         <Project
-          title="Computer Graphics in the AI Era demos"
+          title="Computer Graphics in the AI Era recap"
           link="#"
           description="highlights from CS 8803 in Spring 2026 at GA Tech."
           technologies="[GLSL] [Python]"
