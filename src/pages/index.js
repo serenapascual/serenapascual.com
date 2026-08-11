@@ -20,7 +20,7 @@ export default function Home() {
       </div>
       <p className="lineWithFunLink">view my &nbsp;
         <span>
-          <a href="/Serena_Pascual__Resume_Web__2026_Jan.pdf">resume</a>
+          <a href="/Serena_Pascual__Resume_Web__2026_Aug.pdf">resume</a>
         </span>
       </p>
     </div>

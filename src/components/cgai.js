@@ -17,7 +17,7 @@ export default function Demos() {
       </p>      
       <p>
         <img src="/cgai/ball.gif" alt="ball" />
-        Though this looks like a plain ol' sphere, this beach ball actually uses neural SDFs! What could have been accomplished in 1 line of code instead took 50+ lines and several hours of model training and debugging. OK, I meant that in a tongue-in-cheek way, but this method is cool because in theory the neural network could have learned the implicit functions for any arbitrary manifold OBJ. My hardware at the time (2018 MacBook Pro, integrated Intel Iris GPU with 1.5 GB VRAM) was barring me from rendering anything more complex.
+        Though this looks like a plain ol' sphere, this beach ball actually uses a neural SDF! What could have been accomplished in 1 line of code instead took 50+ lines and several hours of model training and debugging. OK, I meant that in a tongue-in-cheek way, but this method is cool because in theory the neural network could have learned the implicit functions for any arbitrary manifold OBJ. My hardware at the time (2018 MacBook Pro, integrated Intel Iris GPU with 1.5 GB VRAM) was barring me from rendering anything more complex.
       </p>      
       <p>
         <img src="/cgai/rainbow.png" alt="rainbow" />
